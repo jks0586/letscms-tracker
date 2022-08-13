@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow ,desktopCapturer} = require('electron')
 const path = require('path')
+
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -28,3 +29,13 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+
+desktopCapturer.getSources({ types: ['window', 'screen'] }).then(async sources => {
+    for (const source of sources) {
+      if (source.name === 'Electron') {
+        mainWindow.webContents.send('SET_SOURCE', source.id)
+        return
+      }
+    }
+  })
+  
