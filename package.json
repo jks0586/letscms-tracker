@@ -1,0 +1,26 @@
+{
+  "name": "letscms-tracker",
+  "version": "1.0.0",
+  "description": "This is tracker for the letscms",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jks0586/letscms-tracker.git"
+  },
+  "keywords": [
+    "letscms",
+    "tracker"
+  ],
+  "author": "Letscms",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jks0586/letscms-tracker/issues"
+  },
+  "homepage": "https://github.com/jks0586/letscms-tracker#readme",
+  "devDependencies": {
+    "electron": "^20.0.2"
+  }
+}
